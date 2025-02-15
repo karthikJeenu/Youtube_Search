@@ -33,7 +33,7 @@ public class TestCases extends ExcelDP { // Lets us read the data
                 Assert.assertTrue(URL, "Youtube link is not correctly opened");
                 WebElement about = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='About']")));
                 Wrappers.clickOnBtn(driver, about);
-                String text = driver.findElement(By.xpath("//section[@class='ytabout__content']/p")).getText();
+                String text = driver.findElement(By.xpath("//section[contains(@class, 'about__content')]")).getText();
                 System.out.println(text);
                 System.out.println("Clicked on the about button");
                 System.out.println("Testcase01 ended");
