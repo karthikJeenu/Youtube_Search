@@ -27,7 +27,7 @@ public class TestCases extends ExcelDP { // Lets us read the data
         WebDriverWait wait;
 
         @Test(priority = 1, enabled = true)
-        public void Testcase01() {
+        public void testCase01() {
                 System.out.println("Testcase01 started");
                 Boolean URL = driver.getCurrentUrl().contains("youtube");
                 Assert.assertTrue(URL, "Youtube link is not correctly opened");
@@ -40,7 +40,7 @@ public class TestCases extends ExcelDP { // Lets us read the data
         }
 
         @Test(priority = 2, enabled = true)
-        public void Testcase02() {
+        public void testCase02() {
                 System.out.println("Testcase02 started");
               
                 WebElement Films = wait.until(ExpectedConditions
@@ -69,7 +69,7 @@ public class TestCases extends ExcelDP { // Lets us read the data
         }
 
         @Test(priority = 3, enabled = true)
-        public void Testcase03() throws InterruptedException {
+        public void testCase03() throws InterruptedException {
                 System.out.println("Testcase03 started");
                 WebElement Music = wait.until(ExpectedConditions
                                 .elementToBeClickable(By.xpath("//yt-formatted-string[text()='Music']")));
@@ -93,7 +93,7 @@ public class TestCases extends ExcelDP { // Lets us read the data
 
 
         @Test(priority = 4, enabled = true)
-    public void TestCase04() {
+    public void testCase04() {
         System.out.println("Testcase04 started");
         By newsTab = By.xpath("//a[contains(@title, 'News')]");
         Wrappers.scrollToViewport(driver, newsTab);
